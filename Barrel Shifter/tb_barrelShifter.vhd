@@ -20,7 +20,7 @@ use std.textio.all;             -- For basic I/O
 
 entity tb_barrelShifter is
   generic(gCLK_HPER   : time := 10 ns);  
-end tb_Reg_N;
+end tb_barrelShifter;
 
 architecture mixed of tb_barrelShifter is
 
@@ -37,9 +37,9 @@ end component;
 
 signal i_X      : std_logic_vector(31 downto 0):= x"00000000";
 signal i_shamt  : std_logic_vector(4 downto 0):= "00000";
-signal i_type   : std_logic:= '0'; -- 0 for logical, 1 for arithmetic
-signal i_dir    : std_logic:= '0'; -- 0 for right, 1 for left
-signal o_Y      : std_logic_vector(31 downto 0));
+signal i_type   : std_logic; -- 0 for logical, 1 for arithmetic
+signal i_dir    : std_logic; -- 0 for right, 1 for left
+signal o_Y      : std_logic_vector(31 downto 0);
 
 begin
 
@@ -58,7 +58,7 @@ begin
 
     -- Test case 1:
     i_X <= x"FFFFFFFF";
-    i_shamt <= "00000";
+    i_shamt <= "00001";
     i_type <= '0';
     i_dir <= '0';
     wait for gCLK_HPER*2;
@@ -72,7 +72,7 @@ begin
 
     -- Test case 3: 
     i_X <= x"FFFFFFFF";
-    i_shamt <= "00000";
+    i_shamt <= "00010";
     i_type <= '0';
     i_dir <= '0';
     wait for gCLK_HPER*2;
@@ -86,7 +86,7 @@ begin
 
     -- Test case 5: 
     i_X <= x"FFFFFFFF";
-    i_shamt <= "00000";
+    i_shamt <= "00100";
     i_type <= '0';
     i_dir <= '0';
     wait for gCLK_HPER*2;
@@ -97,6 +97,161 @@ begin
     i_type <= '0';
     i_dir <= '0';
     wait for gCLK_HPER*2;
+
+    -- Test case 7: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "01000";
+    i_type <= '0';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 8: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00000";
+    i_type <= '0';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 9: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "10000";
+    i_type <= '0';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 10:
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00001";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 11:
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00000";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 12: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00010";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 13: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00000";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 14: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00100";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 15:
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00000";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 16: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "01000";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 17: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00000";
+    i_type <= '0';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 18: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "10000";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 19:
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00001";
+    i_type <= '1';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 20: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00010";
+    i_type <= '1';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 21: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00100";
+    i_type <= '1';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 22: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "01000";
+    i_type <= '1';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 23: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "10000";
+    i_type <= '1';
+    i_dir <= '0';
+    wait for gCLK_HPER*2;
+
+    -- Test case 24:
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00001";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 25: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00010";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 26: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "00100";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 27: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "01000";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
+    -- Test case 28: 
+    i_X <= x"FFFFFFFF";
+    i_shamt <= "10000";
+    i_type <= '1';
+    i_dir <= '1';
+    wait for gCLK_HPER*2;
+
 
 
 

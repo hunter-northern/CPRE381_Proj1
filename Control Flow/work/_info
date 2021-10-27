@@ -1,0 +1,65 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/bridget1/Desktop/CPRE381_Proj1/Control Flow
+T_opt
+!s110 1634754476
+V8?EK^T1ZYW2A=nYW3X5NV0
+04 7 10 work control structural 1
+=1-00133b5b2bb1-61705fac-c0b32-2cd4
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Econtrol
+Z2 w1634754455
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 19
+R1
+Z5 8control.vhd
+Z6 Fcontrol.vhd
+l0
+L23 1
+VHizSLa=6n8hzfW;Yb7d^I3
+!s100 b7Yi6FkEjh5mgV0mac?JO3
+Z7 OL;C;2021.2;73
+33
+Z8 !s110 1634754469
+!i10b 1
+Z9 !s108 1634754469.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|control.vhd|
+Z11 !s107 control.vhd|
+!i113 0
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astructural
+R3
+R4
+DEx4 work 7 control 0 22 HizSLa=6n8hzfW;Yb7d^I3
+!i122 19
+l54
+L37 265
+V4lDMn>99mD2`oblN9eH?11
+!s100 8A?PQ4@Kbfz2jQo4=9^iS0
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
