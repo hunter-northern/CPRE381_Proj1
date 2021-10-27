@@ -19,6 +19,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -37,6 +39,7 @@ Z4 o-quiet -auto_acc_if_foreign -work work +acc
 Z5 tCvgOpt 0
 n@_opt
 Z6 OL;O;2021.2;73
+R1
 T_opt1
 !s110 1635352383
 V0gVa95bGgO;ijeLMlb>H:2
@@ -49,21 +52,20 @@ n@_opt1
 R6
 R1
 T_opt2
-!s110 1635355142
-VLb?`I6i=CD^oFMdYl`3;W1
+!s110 1635357273
+Vl]O<mK]:^`V?=oEPFPcN=1
 04 16 5 work tb_barrelshifter mixed 1
-=1-0050569b1588-61798a06-58ccb-265f
+=1-0050569b1588-61799259-2fb5b-324f
 R3
 R4
 R5
 n@_opt2
 R6
-R1
 Eandg2
 Z7 w1634749597
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 75
+!i122 78
 Z10 d/home/bridget1/Desktop/CPRE381_Proj1/Barrel Shifter
 Z11 8andg2.vhd
 Z12 Fandg2.vhd
@@ -73,9 +75,9 @@ VQGUB^HK6Ifl3aZXUQBgOg3
 !s100 YT?bGzEmcFo:DlnoC^B4_0
 Z14 OL;C;2021.2;73
 33
-Z15 !s110 1635355135
+Z15 !s110 1635357267
 !i10b 1
-Z16 !s108 1635355135.000000
+Z16 !s108 1635357267.000000
 Z17 !s90 -reportprogress|300|-2008|-work|work|andg2.vhd|barrelShifter.vhd|invg.vhd|mux2t1.vhd|org2.vhd|tb_barrelShifter.vhd|
 Z18 !s107 tb_barrelShifter.vhd|org2.vhd|mux2t1.vhd|invg.vhd|barrelShifter.vhd|andg2.vhd|
 !i113 0
@@ -85,7 +87,7 @@ Adataflow
 R8
 R9
 DEx4 work 5 andg2 0 22 QGUB^HK6Ifl3aZXUQBgOg3
-!i122 75
+!i122 78
 l32
 Z21 L31 6
 V5E?co3b^iz@?:>cbFkg6g1
@@ -104,7 +106,7 @@ Ebarrelshifter
 R7
 R8
 R9
-!i122 75
+!i122 78
 R10
 Z22 8barrelShifter.vhd
 Z23 FbarrelShifter.vhd
@@ -126,7 +128,7 @@ Astructural
 R8
 R9
 DEx4 work 13 barrelshifter 0 22 A9;ZPXPXRkTCiRF<[Y^Sf0
-!i122 75
+!i122 78
 l43
 L24 135
 VIdF9U2D_gnUNgeTSW[6am0
@@ -145,7 +147,7 @@ Einvg
 R7
 R8
 R9
-!i122 75
+!i122 78
 R10
 Z24 8invg.vhd
 Z25 Finvg.vhd
@@ -167,7 +169,7 @@ Adataflow
 R8
 R9
 DEx4 work 4 invg 0 22 2XafnXdoM<1OezT9JV[@G1
-!i122 75
+!i122 78
 l31
 L30 6
 VNcija>Ub?6Q;i;J59XKQg2
@@ -186,7 +188,7 @@ Emux2t1
 R7
 R8
 R9
-!i122 75
+!i122 78
 R10
 Z26 8mux2t1.vhd
 Z27 Fmux2t1.vhd
@@ -196,7 +198,7 @@ VRQ14PXU`Mi[i3VkkWV4g61
 !s100 H2]`;6Vhg?V3c]_V`?OZK3
 R14
 33
-Z29 !s110 1635355136
+R15
 !i10b 1
 R16
 R17
@@ -208,14 +210,14 @@ Astructural
 R8
 R9
 DEx4 work 6 mux2t1 0 22 RQ14PXU`Mi[i3VkkWV4g61
-!i122 75
+!i122 78
 l51
 L28 49
 V6N_jlUS`a?VOzKKFc6:Vo0
 !s100 <VZZaiQLzn=TdEb5`R2a@2
 R14
 33
-R29
+R15
 !i10b 1
 R16
 R17
@@ -227,17 +229,17 @@ Eorg2
 R7
 R8
 R9
-!i122 75
+!i122 78
 R10
-Z30 8org2.vhd
-Z31 Forg2.vhd
+Z29 8org2.vhd
+Z30 Forg2.vhd
 l0
 R13
 VC4IKeHT5FKZ5f?RbYGNl]3
 !s100 bGQ1F9eW^Q17OoL9h4g7z2
 R14
 33
-R29
+R15
 !i10b 1
 R16
 R17
@@ -249,14 +251,14 @@ Adataflow
 R8
 R9
 DEx4 work 4 org2 0 22 C4IKeHT5FKZ5f?RbYGNl]3
-!i122 75
+!i122 78
 l32
 R21
 VN0b<=nBXF?B9Ke9cE<4l11
 !s100 h5_AzR3TdRA0a_K=dQ>mI2
 R14
 33
-R29
+R15
 !i10b 1
 R16
 R17
@@ -265,22 +267,22 @@ R18
 R19
 R20
 Etb_barrelshifter
-Z32 w1635355115
-Z33 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
-Z34 DPx4 ieee 16 std_logic_textio 0 22 8]8<fKiYoHe;_IDO3kmNH2
+Z31 w1635357260
+Z32 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z33 DPx4 ieee 16 std_logic_textio 0 22 8]8<fKiYoHe;_IDO3kmNH2
 R8
 R9
-!i122 75
+!i122 78
 R10
-Z35 8tb_barrelShifter.vhd
-Z36 Ftb_barrelShifter.vhd
+Z34 8tb_barrelShifter.vhd
+Z35 Ftb_barrelShifter.vhd
 l0
 R28
 V=HEcM5Ai4dSCoMja3TOPa2
 !s100 eY=DYg^7]l1WY0Z@n03Se0
 R14
 33
-R29
+R15
 !i10b 1
 R16
 R17
@@ -289,19 +291,19 @@ R18
 R19
 R20
 Amixed
+R32
 R33
-R34
 R8
 R9
 DEx4 work 16 tb_barrelshifter 0 22 =HEcM5Ai4dSCoMja3TOPa2
-!i122 75
+!i122 78
 l44
-L25 236
-VY0Hh02RM<b3PVD[Rgfi7Q2
-!s100 BFTk38LQ[dSWPDh8MRN2;0
+L25 201
+V19PJnGW2aL2GZZIgFN1bi3
+!s100 HiEnUWkR==bM3f3bMdG`e3
 R14
 33
-R29
+R15
 !i10b 1
 R16
 R17

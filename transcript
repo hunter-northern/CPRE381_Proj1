@@ -12,610 +12,186 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-cd {/home/bridget1/Desktop/CPRE381_Proj1/Control Flow}
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:33:12 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# ** Error: (vcom-11) Could not find work.bit32array.
-# ** Error (suppressible): control.vhd(22): (vcom-1195) Cannot find expanded name "work.bit32Array".
-# ** Error: control.vhd(22): Unknown expanded name.
-# ** Note: control.vhd(24): VHDL Compiler exiting
-# End time: 12:33:13 on Oct 20,2021, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:33:27 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# ** Error: control.vhd(37): near "end": (vcom-1576) expecting IDENTIFIER.
-# ** Note: control.vhd(37): VHDL Compiler exiting
-# End time: 12:33:27 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:33:48 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(41): near "if": (vcom-1576) expecting BEGIN.
-# ** Note: control.vhd(41): VHDL Compiler exiting
-# End time: 12:33:48 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:34:10 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Warning: control.vhd(42): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 24).
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Error: control.vhd(148): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(164): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(180): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(196): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(212): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(228): near "when": (vcom-1576) expecting == or '+' or '-' or '&'.
-# ** Error: control.vhd(229): (vcom-1136) Unknown identifier "endif".
-# ** Error: control.vhd(231): near "structural": (vcom-1576) expecting IF.
-# End time: 12:34:10 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 9, Warnings: 1
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:38:33 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Warning: control.vhd(42): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 24).
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Error: control.vhd(241): (vcom-1136) Unknown identifier "endif".
-# ** Error: control.vhd(243): near "structural": (vcom-1576) expecting IF.
-# End time: 12:38:33 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 1
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:11 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Warning: control.vhd(42): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 24).
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Error: control.vhd(241): (vcom-1136) Unknown identifier "endif".
-# ** Error: control.vhd(243): near "structural": (vcom-1576) expecting IF.
-# End time: 12:39:11 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 1
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:41:21 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Warning: control.vhd(42): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 24).
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Error: control.vhd(150): (vcom-1342) Choice value "001110" duplicates prior choice value at line 146.
-# ** Error: control.vhd(167): (vcom-1342) Choice value "001110" duplicates prior choice value at line 163.
-# ** Error: control.vhd(184): (vcom-1342) Choice value "001110" duplicates prior choice value at line 180.
-# ** Error: control.vhd(201): (vcom-1342) Choice value "001110" duplicates prior choice value at line 197.
-# ** Error: control.vhd(218): (vcom-1342) Choice value "001110" duplicates prior choice value at line 214.
-# ** Error: control.vhd(235): (vcom-1342) Choice value "001110" duplicates prior choice value at line 231.
-# ** Note: control.vhd(243): VHDL Compiler exiting
-# End time: 12:41:21 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 1
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:43:58 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Warning: control.vhd(42): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 24).
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Note: control.vhd(237): VHDL Compiler exiting
-# End time: 12:43:59 on Oct 20,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 1
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:44:30 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Note: control.vhd(237): VHDL Compiler exiting
-# End time: 12:44:30 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:45:17 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Note: control.vhd(237): VHDL Compiler exiting
-# End time: 12:45:17 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:47:53 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(42): Illegal concurrent statement.
-# ** Note: control.vhd(237): VHDL Compiler exiting
-# End time: 12:47:53 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:02:02 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# ** Error: control.vhd(39): near "signal": syntax error
-# ** Note: control.vhd(39): VHDL Compiler exiting
-# End time: 13:02:02 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:02:17 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(43): Illegal concurrent statement.
-# ** Note: control.vhd(238): VHDL Compiler exiting
-# End time: 13:02:18 on Oct 20,2021, Elapsed time: 0:00:01
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:12:26 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(42): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(43): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(44): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(45): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(46): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(47): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(48): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(49): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(50): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(51): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(52): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(53): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(54): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(55): near "out": (vcom-1576) expecting STRING or IDENTIFIER or << or '('.
-# ** Error: control.vhd(60): Illegal target for signal assignment.
-# ** Error: control.vhd(60): (vcom-1136) Unknown identifier "s1RegDst".
-# ** Error: control.vhd(61): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(62): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(63): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(64): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(65): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(66): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(67): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(68): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(69): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(70): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(71): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(72): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(73): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(76): Illegal target for signal assignment.
-# ** Error: control.vhd(76): (vcom-1136) Unknown identifier "s1Branch".
-# ** Error: control.vhd(77): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(78): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(79): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(80): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(81): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(82): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(83): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(84): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(85): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(86): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(87): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(88): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(89): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(92): Illegal target for signal assignment.
-# ** Error: control.vhd(92): (vcom-1136) Unknown identifier "s1MemtoReg".
-# ** Error: control.vhd(93): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(94): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(95): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(96): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(97): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(98): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(99): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(100): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(101): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(102): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(103): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(104): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(105): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(108): Illegal target for signal assignment.
-# ** Error: control.vhd(108): (vcom-1136) Unknown identifier "s1ALUOp".
-# ** Error: control.vhd(124): Illegal target for signal assignment.
-# ** Error: control.vhd(124): (vcom-1136) Unknown identifier "s1MemWrite".
-# ** Error: control.vhd(125): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(126): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(127): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(128): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(129): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(130): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(131): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(132): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(133): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(134): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(135): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(136): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(137): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(140): Illegal target for signal assignment.
-# ** Error: control.vhd(140): (vcom-1136) Unknown identifier "s1ALUSrc".
-# ** Error: control.vhd(141): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(142): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(143): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(144): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(145): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(146): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(147): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(148): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(149): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(150): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(151): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(152): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(153): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(156): Illegal target for signal assignment.
-# ** Error: control.vhd(156): (vcom-1136) Unknown identifier "s1RegWrite".
-# ** Error: control.vhd(157): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(158): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(159): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(160): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(161): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(162): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(163): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(164): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(165): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(166): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(167): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(168): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(169): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(172): Illegal target for signal assignment.
-# ** Error: control.vhd(172): (vcom-1136) Unknown identifier "s2RegDst".
-# ** Error: control.vhd(173): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(174): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(175): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(176): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(177): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(178): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(179): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(180): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(181): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(182): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(183): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(184): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(185): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(188): Illegal target for signal assignment.
-# ** Error: control.vhd(188): (vcom-1136) Unknown identifier "s2MemtoReg".
-# ** Error: control.vhd(189): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(190): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(191): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(192): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(193): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(194): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(195): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(196): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(197): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(198): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(199): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(200): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(201): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(204): Illegal target for signal assignment.
-# ** Error: control.vhd(204): (vcom-1136) Unknown identifier "s2ALUOp".
-# ** Error: control.vhd(220): Illegal target for signal assignment.
-# ** Error: control.vhd(220): (vcom-1136) Unknown identifier "s2MemWrite".
-# ** Error: control.vhd(221): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(222): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(223): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(224): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(225): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(226): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(227): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(228): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(229): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(230): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(231): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(232): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(233): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(236): Illegal target for signal assignment.
-# ** Error: control.vhd(236): (vcom-1136) Unknown identifier "s2ALUSrc".
-# ** Error: control.vhd(237): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(238): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(239): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(240): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(241): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(242): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(243): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(244): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(245): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(246): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(247): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(248): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(249): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(252): Illegal target for signal assignment.
-# ** Error: control.vhd(252): (vcom-1136) Unknown identifier "s2RegWrite".
-# ** Error: control.vhd(253): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(254): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(255): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(256): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(257): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(258): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(259): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(260): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(261): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(262): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(263): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(264): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(265): Enumeration literal '0' is not of type (error).
-# ** Error: control.vhd(266): Illegal concurrent statement.
-# ** Error: control.vhd(267): (vcom-1136) Unknown identifier "s1RegDst".
-# ** Error: control.vhd(268): (vcom-1136) Unknown identifier "s1Branch".
-# ** Error: control.vhd(269): (vcom-1136) Unknown identifier "s1MemtoReg".
-# ** Error: control.vhd(270): (vcom-1136) Unknown identifier "s1ALUOp".
-# ** Error: control.vhd(271): (vcom-1136) Unknown identifier "s1MemWrite".
-# ** Error: control.vhd(272): (vcom-1136) Unknown identifier "s1ALUSrc".
-# ** Error: control.vhd(273): (vcom-1136) Unknown identifier "s1RegWrite".
-# ** Error: control.vhd(275): (vcom-1136) Unknown identifier "s2RegDst".
-# ** Error: control.vhd(276): (vcom-1136) Unknown identifier "s2Branch".
-# ** Error: control.vhd(277): (vcom-1136) Unknown identifier "s2MemtoReg".
-# ** Error: control.vhd(278): (vcom-1136) Unknown identifier "s2ALUOp".
-# ** Error: control.vhd(279): (vcom-1136) Unknown identifier "s2MemWrite".
-# ** Error: control.vhd(280): (vcom-1136) Unknown identifier "s2ALUSrc".
-# ** Error: control.vhd(281): (vcom-1136) Unknown identifier "s2RegWrite".
-# ** Note: control.vhd(284): VHDL Compiler exiting
-# End time: 13:12:26 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 198, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:13:47 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(267): Illegal concurrent statement.
-# ** Note: control.vhd(285): VHDL Compiler exiting
-# End time: 13:13:47 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:14:13 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(267): Illegal concurrent statement.
-# ** Note: control.vhd(285): VHDL Compiler exiting
-# End time: 13:14:13 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:16:36 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(267): Illegal concurrent statement.
-# ** Note: control.vhd(285): VHDL Compiler exiting
-# End time: 13:16:36 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:22:24 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# ** Error: control.vhd(268): near "if": syntax error
-# ** Note: control.vhd(286): VHDL Compiler exiting
-# End time: 13:22:24 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /usr/local/mentor/questasim/linux_x86_64/vcom failed.
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:23:12 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# End time: 13:23:12 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -voptargs=+acc control
-# vsim -voptargs="+acc" control 
-# Start time: 13:23:54 on Oct 20,2021
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.control(structural)#1
-vcom -2008 -work work *.vhd
-# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:25:45 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# End time: 13:25:45 on Oct 20,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim -voptargs=+acc control
-# End time: 13:25:47 on Oct 20,2021, Elapsed time: 0:01:53
-# Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" control 
-# Start time: 13:25:47 on Oct 20,2021
+cd {/home/bridget1/Desktop/CPRE381_Proj1/Barrel Shifter}
+vsim -voptargs=+acc work.barrelshifter
+# vsim -voptargs="+acc" work.barrelshifter 
+# Start time: 12:45:12 on Oct 27,2021
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.control(structural)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/barrelshifter/i_X \
+sim:/barrelshifter/i_shamt \
+sim:/barrelshifter/i_type \
+sim:/barrelshifter/i_dir \
+sim:/barrelshifter/o_Y
+force -freeze sim:/barrelshifter/i_X 32'h00000001 0
+force -freeze sim:/barrelshifter/i_shamt 5'h01 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+force -freeze sim:/barrelshifter/o_Y 32'hXXXXXXXX 0
+run 20
+# Causality operation skipped due to absence of debug database file
 vcom -2008 -work work *.vhd
 # QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:26:18 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
+# Start time: 12:46:51 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# End time: 13:26:18 on Oct 20,2021, Elapsed time: 0:00:00
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:46:51 on Oct 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim -voptargs=+acc control
-# End time: 13:26:20 on Oct 20,2021, Elapsed time: 0:00:33
+vsim -voptargs=+acc barrelShifter
+# End time: 12:47:09 on Oct 27,2021, Elapsed time: 0:01:57
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" control 
-# Start time: 13:26:20 on Oct 20,2021
+# vsim -voptargs="+acc" barrelShifter 
+# Start time: 12:47:09 on Oct 27,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/barrelshifter/i_X \
+sim:/barrelshifter/i_shamt \
+sim:/barrelshifter/i_type \
+sim:/barrelshifter/i_dir \
+sim:/barrelshifter/o_Y
+force -freeze sim:/barrelshifter/i_X 32'h00000001 0
+force -freeze sim:/barrelshifter/i_shamt 5'h01 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+force -freeze sim:/barrelshifter/o_Y 32'hXXXXXXXX 0
+run 20
+force -freeze sim:/barrelshifter/i_X 32'h00010000 0
+force -freeze sim:/barrelshifter/i_shamt 5'h04 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+run 20
+vcom -2008 -work work *.vhd
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 12:51:41 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:51:41 on Oct 27,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc tb_barrelShifter
+# End time: 12:51:55 on Oct 27,2021, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" tb_barrelShifter 
+# Start time: 12:51:55 on Oct 27,2021
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.control(structural)#1
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_barrelshifter(mixed)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
 add wave -position insertpoint  \
-sim:/control/iOP \
-sim:/control/iFunc \
-sim:/control/oRegDst \
-sim:/control/oBranch \
-sim:/control/oMemtoReg \
-sim:/control/oALUOp \
-sim:/control/oMemWrite \
-sim:/control/oALUSrc \
-sim:/control/oRegWrite \
-sim:/control/s1RegDst \
-sim:/control/s1Branch \
-sim:/control/s1MemtoReg \
-sim:/control/s1ALUOp \
-sim:/control/s1MemWrite \
-sim:/control/s1ALUSrc \
-sim:/control/s1RegWrite \
-sim:/control/s2RegDst \
-sim:/control/s2Branch \
-sim:/control/s2MemtoReg \
-sim:/control/s2ALUOp \
-sim:/control/s2MemWrite \
-sim:/control/s2ALUSrc \
-sim:/control/s2RegWrite
-force -freeze sim:/control/iOP 001000 0
-force -freeze sim:/control/iFunc 100000 0
-run 200
+sim:/tb_barrelshifter/gCLK_HPER \
+sim:/tb_barrelshifter/i_X \
+sim:/tb_barrelshifter/i_shamt \
+sim:/tb_barrelshifter/i_type \
+sim:/tb_barrelshifter/i_dir \
+sim:/tb_barrelshifter/o_Y \
+sim:/tb_barrelshifter/cCLK_PER
+run 440
 vcom -2008 -work work *.vhd
 # QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 13:27:49 on Oct 20,2021
-# vcom -reportprogress 300 -2008 -work work control.vhd 
+# Start time: 12:54:27 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity control
-# -- Compiling architecture structural of control
-# End time: 13:27:49 on Oct 20,2021, Elapsed time: 0:00:00
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:54:27 on Oct 27,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim -voptargs=+acc control
-# End time: 13:27:56 on Oct 20,2021, Elapsed time: 0:01:36
+vsim -voptargs=+acc tb_barrelShifter
+# End time: 12:54:33 on Oct 27,2021, Elapsed time: 0:02:38
 # Errors: 0, Warnings: 0
-# vsim -voptargs="+acc" control 
-# Start time: 13:27:56 on Oct 20,2021
+# vsim -voptargs="+acc" tb_barrelShifter 
+# Start time: 12:54:33 on Oct 27,2021
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.control(structural)#1
-force -freeze sim:/control/iOP 001000 0
-force -freeze sim:/control/iFunc 100000 0
-run 200
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_barrelshifter(mixed)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
 add wave -position insertpoint  \
-sim:/control/iOP \
-sim:/control/iFunc \
-sim:/control/oRegDst \
-sim:/control/oBranch \
-sim:/control/oMemtoReg \
-sim:/control/oALUOp \
-sim:/control/oMemWrite \
-sim:/control/oALUSrc \
-sim:/control/oRegWrite \
-sim:/control/s1RegDst \
-sim:/control/s1Branch \
-sim:/control/s1MemtoReg \
-sim:/control/s1ALUOp \
-sim:/control/s1MemWrite \
-sim:/control/s1ALUSrc \
-sim:/control/s1RegWrite \
-sim:/control/s2RegDst \
-sim:/control/s2Branch \
-sim:/control/s2MemtoReg \
-sim:/control/s2ALUOp \
-sim:/control/s2MemWrite \
-sim:/control/s2ALUSrc \
-sim:/control/s2RegWrite
-force -freeze sim:/control/iOP 001000 0
-force -freeze sim:/control/iFunc 100000 0
-run 200
+sim:/tb_barrelshifter/gCLK_HPER \
+sim:/tb_barrelshifter/i_X \
+sim:/tb_barrelshifter/i_shamt \
+sim:/tb_barrelshifter/i_type \
+sim:/tb_barrelshifter/i_dir \
+sim:/tb_barrelshifter/o_Y \
+sim:/tb_barrelshifter/cCLK_PER
+runnnn 440
+# invalid command name "runnnn"
+run 440
+# Break key hit
+# End time: 12:56:05 on Oct 27,2021, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 0

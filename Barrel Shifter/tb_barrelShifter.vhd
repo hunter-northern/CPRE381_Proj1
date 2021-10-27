@@ -178,78 +178,43 @@ begin
     -- Test case 18: 
     i_X <= x"FFFFFFFF";
     i_shamt <= "10000";
-    i_type <= '1';
+    i_type <= '0';
     i_dir <= '1';
     wait for gCLK_HPER*2;
 
     -- Test case 19:
-    i_X <= x"FFFFFFFF";
+    i_X <= x"01234567";
     i_shamt <= "00001";
     i_type <= '1';
     i_dir <= '0';
     wait for gCLK_HPER*2;
 
     -- Test case 20: 
-    i_X <= x"FFFFFFFF";
+    i_X <= x"01234567";
     i_shamt <= "00010";
     i_type <= '1';
     i_dir <= '0';
     wait for gCLK_HPER*2;
 
     -- Test case 21: 
-    i_X <= x"FFFFFFFF";
+    i_X <= x"01234567";
     i_shamt <= "00100";
     i_type <= '1';
     i_dir <= '0';
     wait for gCLK_HPER*2;
 
     -- Test case 22: 
-    i_X <= x"FFFFFFFF";
+    i_X <= x"01234567";
     i_shamt <= "01000";
     i_type <= '1';
     i_dir <= '0';
     wait for gCLK_HPER*2;
 
     -- Test case 23: 
-    i_X <= x"FFFFFFFF";
+    i_X <= x"01234567";
     i_shamt <= "10000";
     i_type <= '1';
     i_dir <= '0';
-    wait for gCLK_HPER*2;
-
-    -- Test case 24:
-    i_X <= x"FFFFFFFF";
-    i_shamt <= "00001";
-    i_type <= '1';
-    i_dir <= '1';
-    wait for gCLK_HPER*2;
-
-    -- Test case 25: 
-    i_X <= x"FFFFFFFF";
-    i_shamt <= "00010";
-    i_type <= '1';
-    i_dir <= '1';
-    wait for gCLK_HPER*2;
-
-    -- Test case 26: 
-    i_X <= x"FFFFFFFF";
-    i_shamt <= "00100";
-    i_type <= '1';
-    i_dir <= '1';
-    wait for gCLK_HPER*2;
-
-    -- Test case 27: 
-    i_X <= x"FFFFFFFF";
-    i_shamt <= "01000";
-    i_type <= '1';
-    i_dir <= '1';
-    wait for gCLK_HPER*2;
-
-    -- Test case 28: 
-    i_X <= x"FFFFFFFF";
-    i_shamt <= "10000";
-    i_type <= '1';
-    i_dir <= '1';
     wait for gCLK_HPER*2;
 
 
