@@ -179,6 +179,7 @@ with iOP select
                 '0' when "000101", --bne
                 '0' when "000010", --j
                 '0' when "000011", --jal
+                '0' when "011111", --repl.qb
                 '0' when others;
 
 with iOP select
@@ -195,6 +196,7 @@ with iOP select
                 '1' when "000101", --bne
                 '1' when "000010", --j
                 '1' when "000011", --jal
+                '0' when "011111", --repl.qb
                 '0' when others;
 
 with iOP select
@@ -211,6 +213,7 @@ with iOP select
                 '0' when "000101", --bne
                 '0' when "000010", --j
                 '1' when "000011", --jal
+                '0' when "011111", --repl.qb
                 '0' when others;
 
 with iOP select
@@ -227,6 +230,7 @@ with iOP select
                 "0000" when "000101", --bne
                 "0000" when "000010", --j
                 "0000" when "000011", --jal
+                "0000" when "011111", --repl.qb
                 "0000" when others;
 
 with iOP select
@@ -243,6 +247,7 @@ with iOP select
                 '1' when "000101", --bne
                 '1' when "000010", --j
                 '0' when "000011", --jal
+                '0' when "011111", --repl.qb
                 '0' when others;
 
 with iOP select
@@ -259,6 +264,7 @@ with iOP select
                 '0' when "000101", --bne
                 '0' when "000010", --j
                 '0' when "000011", --jal
+                '0' when "011111", --repl.qb
                 '0' when others;
 
 with iOP select
@@ -275,6 +281,7 @@ with iOP select
                 '0' when "000101", --bne
                 '0' when "000010", --j
                 '0' when "000011", --jal
+                '1' when "011111", --repl.qb
                 '0' when others;
 
 Process (iOP, s1RegDst, s1Branch, s1MemtoReg, s1ALUOp, s1MemWrite, s1ALUSrc, s1RegWrite, s2RegDst, s2Branch, s2MemtoReg, s2ALUOp, s2MemWrite, s2ALUSrc, s2RegWrite)
