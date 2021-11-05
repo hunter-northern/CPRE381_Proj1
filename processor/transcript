@@ -1,0 +1,197 @@
+# //  Questa Sim-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+cd {/home/bridget1/Desktop/CPRE381_Proj1/Barrel Shifter}
+vsim -voptargs=+acc work.barrelshifter
+# vsim -voptargs="+acc" work.barrelshifter 
+# Start time: 12:45:12 on Oct 27,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/barrelshifter/i_X \
+sim:/barrelshifter/i_shamt \
+sim:/barrelshifter/i_type \
+sim:/barrelshifter/i_dir \
+sim:/barrelshifter/o_Y
+force -freeze sim:/barrelshifter/i_X 32'h00000001 0
+force -freeze sim:/barrelshifter/i_shamt 5'h01 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+force -freeze sim:/barrelshifter/o_Y 32'hXXXXXXXX 0
+run 20
+# Causality operation skipped due to absence of debug database file
+vcom -2008 -work work *.vhd
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 12:46:51 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:46:51 on Oct 27,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc barrelShifter
+# End time: 12:47:09 on Oct 27,2021, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" barrelShifter 
+# Start time: 12:47:09 on Oct 27,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/barrelshifter/i_X \
+sim:/barrelshifter/i_shamt \
+sim:/barrelshifter/i_type \
+sim:/barrelshifter/i_dir \
+sim:/barrelshifter/o_Y
+force -freeze sim:/barrelshifter/i_X 32'h00000001 0
+force -freeze sim:/barrelshifter/i_shamt 5'h01 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+force -freeze sim:/barrelshifter/o_Y 32'hXXXXXXXX 0
+run 20
+force -freeze sim:/barrelshifter/i_X 32'h00010000 0
+force -freeze sim:/barrelshifter/i_shamt 5'h04 0
+force -freeze sim:/barrelshifter/i_type 1 0
+force -freeze sim:/barrelshifter/i_dir 0 0
+run 20
+vcom -2008 -work work *.vhd
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 12:51:41 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:51:41 on Oct 27,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc tb_barrelShifter
+# End time: 12:51:55 on Oct 27,2021, Elapsed time: 0:04:46
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" tb_barrelShifter 
+# Start time: 12:51:55 on Oct 27,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_barrelshifter(mixed)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_barrelshifter/gCLK_HPER \
+sim:/tb_barrelshifter/i_X \
+sim:/tb_barrelshifter/i_shamt \
+sim:/tb_barrelshifter/i_type \
+sim:/tb_barrelshifter/i_dir \
+sim:/tb_barrelshifter/o_Y \
+sim:/tb_barrelshifter/cCLK_PER
+run 440
+vcom -2008 -work work *.vhd
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 12:54:27 on Oct 27,2021
+# vcom -reportprogress 300 -2008 -work work andg2.vhd barrelShifter.vhd invg.vhd mux2t1.vhd org2.vhd tb_barrelShifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andg2
+# -- Compiling architecture dataflow of andg2
+# -- Compiling entity barrelShifter
+# -- Compiling architecture structural of barrelShifter
+# -- Compiling entity invg
+# -- Compiling architecture dataflow of invg
+# -- Compiling entity mux2t1
+# -- Compiling architecture structural of mux2t1
+# -- Compiling entity org2
+# -- Compiling architecture dataflow of org2
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# -- Compiling entity tb_barrelShifter
+# -- Compiling architecture mixed of tb_barrelShifter
+# End time: 12:54:27 on Oct 27,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc tb_barrelShifter
+# End time: 12:54:33 on Oct 27,2021, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" tb_barrelShifter 
+# Start time: 12:54:33 on Oct 27,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_barrelshifter(mixed)#1
+# Loading work.barrelshifter(structural)#1
+# Loading work.mux2t1(structural)#1
+# Loading work.invg(dataflow)#1
+# Loading work.andg2(dataflow)#1
+# Loading work.org2(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_barrelshifter/gCLK_HPER \
+sim:/tb_barrelshifter/i_X \
+sim:/tb_barrelshifter/i_shamt \
+sim:/tb_barrelshifter/i_type \
+sim:/tb_barrelshifter/i_dir \
+sim:/tb_barrelshifter/o_Y \
+sim:/tb_barrelshifter/cCLK_PER
+runnnn 440
+# invalid command name "runnnn"
+run 440
+# Break key hit
+# End time: 12:56:05 on Oct 27,2021, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 0

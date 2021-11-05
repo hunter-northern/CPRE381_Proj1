@@ -29,9 +29,6 @@ entity control is
        oALUOp   : out std_logic_vector(3 downto 0);
        oMemWrite: out std_logic;
        oALUSrc  : out std_logic;
-       oJr	: out std_logic;
-       oJal     : out std_logic;
-       oBNE     : out std_logic;
        oRegWrite: out std_logic);
 
 end control;
@@ -53,7 +50,6 @@ signal s2ALUOp   : std_logic_vector(3 downto 0);
 signal s2MemWrite: std_logic;
 signal s2ALUSrc  : std_logic;
 signal s2RegWrite: std_logic;
-signal sJr       : std_logic;
 
 begin
 
@@ -86,7 +82,7 @@ with iFunc select
                 '0' when "000011", --sra
                 '0' when "100010", --sub
                 '0' when "100011", --subu
-                '0' when "001000", --jr
+                '1' when "001000", --jr
                 '0' when others;
 
 with iFunc select
@@ -168,10 +164,6 @@ with iFunc select
                 '1' when "100011", --subu
                 '1' when "001000", --jr
                 '0' when others;
-
-with iFunc select
-     sJr <= '1' when "001000", --jr
-            '0' when others;
 
 with iOP select
      s2RegDst <= '0' when "001000", --addi
@@ -292,16 +284,6 @@ with iOP select
                 '1' when "011111", --repl.qb
                 '0' when others;
 
-
-with iOP select
-      oJal <= '1' when "000011", --jal
-              '0' when others;
-
-with iOP select
-      oBNE <= '1' when "000101",
-              '0' when others;
-     
-
 Process (iOP, s1RegDst, s1Branch, s1MemtoReg, s1ALUOp, s1MemWrite, s1ALUSrc, s1RegWrite, s2RegDst, s2Branch, s2MemtoReg, s2ALUOp, s2MemWrite, s2ALUSrc, s2RegWrite)
 begin
 if iOP = "000000" then
@@ -312,7 +294,6 @@ if iOP = "000000" then
        oMemWrite <= s1MemWrite;
        oALUSrc <= s1ALUSrc;
        oRegWrite <= s1RegWrite;
-       oJr <= sJr;
 else
        oRegDst <= s2RegDst; 
        oBranch <= s2Branch; 
@@ -321,7 +302,6 @@ else
        oMemWrite <= s2MemWrite;
        oALUSrc <= s2ALUSrc;
        oRegWrite <= s2RegWrite;
-       oJr <= "00000";
 end if;
 end Process;
 
