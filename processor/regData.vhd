@@ -14,8 +14,16 @@ entity regData is
         i_RT 		            : in std_logic_vector(4 downto 0);
 	i_RD			    : in std_logic_vector(4 downto 0);	
 	i_IMM			    : in std_logic_vector(15 downto 0);
-        nAdd_Sub	            : in std_logic;
-        Alu_Src			    : in std_logic;
+        i_AluCtl  	            : in std_logic_vector(4 downto 0); --modified
+        i_nAddSub	            : in std_logic;
+	--alu adds
+        i_Shft		            : in std_logic;
+	i_LogicCtrl		    : in std_logic_vector(1 downto 0);
+	i_ShftDIR		    : in std_logic;
+	i_SHAMT			    : in std_logic_vector(4 downto 0);
+	i_Unsign		    : in std_logic;
+	o_ZERO			    : out std_logic;
+        --end alu adds
         i_SignS			    : in std_logic;
 	i_RegDst		    : in std_logic;
 	i_MEMtREG 		    : in std_logic;
@@ -45,11 +53,19 @@ component ALUDatapath is
 	i_RD			    : in std_logic_vector(4 downto 0);	
 	i_IMM			    : in std_logic_vector(N-1 downto 0);
 	i_WD			    : in std_logic_vector(N-1 downto 0);
-	nAdd_Sub	            : in std_logic;
-        Alu_Src			    : in std_logic;
+        i_AluCtl  	            : in std_logic_vector(2 downto 0); --modified
+        i_nAddSub	            : in std_logic;
+	--alu adds
+        i_Shft		            : in std_logic;
+	i_LogicCtrl		    : in std_logic_vector(1 downto 0);
+	i_ShftDIR		    : in std_logic;
+	i_SHAMT			    : in std_logic_vector(4 downto 0);
+	i_Unsign		    : in std_logic;
+	o_ZERO			    : out std_logic;
+        --end alu adds
 	o_RTO			    : out std_logic_vector(N-1 downto 0);
 	o_Overflow	            : out std_logic;
-	o_ALUout		    : out std_logic_vector(N-1 downto 0));
+	o_AluOut		    : out std_logic_vector(N-1 downto 0));
 
 end component;
 
@@ -106,8 +122,14 @@ ALUDATA: ALUDatapath port map(
 	i_RD  => s_REGDST,	
 	i_IMM => s_BITIMM,
 	i_WD  => s_MEMoRES,
-	nAdd_Sub => nAdd_Sub,
-        Alu_Src	 => Alu_Src,
+	i_AluCtrl => i_AluCtrl,
+        i_nAddSub => i_nAddSub,
+	i_Shft => i_Shft,
+        i_LogicCtrl => i_LogicCtrl,
+	i_ShftDIR => i_ShftDIR,
+        i_SHAMT => i_SHAMT,
+        i_Unsign => i_Unsign,
+        o_ZERO => o_ZERO,
 	o_RTO => s_RT_B,
 	o_Overflow => o_Overflow,
 	o_ALUout  => s_ALUR);

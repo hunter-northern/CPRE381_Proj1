@@ -15,23 +15,37 @@ entity ALUDatapath is
 	i_RD			    : in std_logic_vector(4 downto 0);	
 	i_IMM			    : in std_logic_vector(N-1 downto 0);
 	i_WD			    : in std_logic_vector(N-1 downto 0);
-        Alu_Ctl  	            : in std_logic_vector(4 downto 0);
-        Alu_Src			    : in std_logic;
+        i_AluCtl  	            : in std_logic_vector(2 downto 0);
+        i_nAddSub	            : in std_logic;
+	--alu
+        i_Shft		            : in std_logic;
+	i_LogicCtrl		    : in std_logic_vector(1 downto 0);
+	i_ShftDIR		    : in std_logic;
+	i_SHAMT			    : in std_logic_vector(4 downto 0);
+	i_Unsign		    : in std_logic;
+	o_ZERO			    : out std_logic;
+        --end alu
 	o_RTO			    : out std_logic_vector(N-1 downto 0);
 	o_Overflow	            : out std_logic;
-	o_ALUout		    : out std_logic_vector(N-1 downto 0));
+	o_AluOut		    : out std_logic_vector(N-1 downto 0));
 
 end ALUDatapath;
 
 architecture structure of ALUdatapath is
 
-component ALU--finish
-  port(i_X 		            :in std_logic_vector(N-1 downto 0);
-       i_Y 		            :in std_logic_vector(N-1 downto 0);
-     --  i_C 		            : in std_logic;
-       Add_Sub	 		    : in std_logic_vector(4 downto 0);
-       o_C 		            : out std_logic;
-       o_B 		            : out std_logic_vector(N-1 downto 0));
+component ALU
+  port(i_PA 		            : in std_logic_vector(N-1 downto 0);
+       i_PBoIMM		            : in std_logic_vector(N-1 downto 0);
+	i_SHAMT			    : in std_logic_vector(4 downto 0);
+	i_ALUOP			    : in std_logic_vector(2 downto 0);
+	i_ShftDIR		    : in std_logic;
+	i_LogicCtrl		    : in std_logic_vector(1 downto 0);
+	i_AddSub		    : in std_logic;
+	i_ShftTYP		    : in std_logic;
+	i_Unsign		    : in std_logic;
+        o_ALURES 		    : out std_logic_vector(N-1 downto 0);
+	o_OvrFlw 	            : out std_logic;
+	o_ZERO 		            : out std_logic);
 	end component;
 
 component RegFile is
@@ -54,12 +68,26 @@ component mux2t1_N is
        o_O          : out std_logic_vector(N-1 downto 0));
 end component;
 
-signal s_ALURES, S_RT_I : std_logic_vector(31 downto 0);
+signal s_ALURES, s_RT_I : std_logic_vector(31 downto 0);
 signal s_RS_A, s_RT_B : std_logic_vector(31 downto 0);
 signal s_oC : std_logic;
 
 begin
 
+ALUI: ALU 
+    port map(
+	i_PA        => s_RS_A,
+	i_PBoIMM    => s_RT_I,
+	i_SHAMT     => i_SHAMT,
+	i_ALUOP     => i_ALUCtrl, --something needs to change, two different sizes
+	i_ShftDIR   => i_ShftDIR,
+	i_LogicCtrl => i_LogicCtrl,
+	i_AddSub    => i_nAddSub,
+	i_ShftTYP   => i_Shft,
+	i_Unsign    => i_Unsign,
+        o_ALURES    => o_AluOut,
+	o_OvrFlw    => o_Overflow,
+	o_ZERO      => o_ZERO);
 
 
 REGFI: RegFile port map(i_CLK => i_CLK,
@@ -78,14 +106,7 @@ MUXRTI: mux2t1_N port map(
 	i_S => Alu_Src,
 	i_D0 => s_RT_B,
 	i_D1 => i_IMM,
-	o_O  => S_RT_I);
-
-ALUSRC: ALU port map(
-       i_X =>  S_RS_A,
-       i_Y =>  S_RT_I,		            		            
-       Add_Sub	=> Alu_Ctrl, 		   
-       o_C 	=> o_Overflow,	            
-       o_B 	=> o_ALUout);
+	o_O  => s_RT_I);
 
 
   end structure;
