@@ -120,7 +120,7 @@ port( i_CLK                       : in std_logic;
 	i_RS			    : in std_logic_vector(31 downto 0);
 	o_WRITEDST		    : out std_logic_vector(4 downto 0);
 	o_JaloDataWrite		    : out std_logic_vector(31 downto 0);
-	o_Instr			    : out std_logic_vector(N-1 downto 0));
+	o_InstrAddr			: out std_logic_vector(N-1 downto 0));
 
 end component;
 
@@ -132,7 +132,7 @@ signal s_ADDSUB, s_SHFTDIR, s_SHFTTYPE, s_Unsigned, s_RegWrEn : std_logic;
 
 signal s_iWRITEDST, s_oWRITEDST, s_RToRD : std_logic_vector(4 downto 0);
 signal s_iJumpAddr : std_logic_vector(25 downto 0);
-signal s_ALUWriteData, s_JaloALUWrite, s_Instruction, s_MEMOUT : std_logic_vector(31 downto 0); 
+signal s_ALUWriteData, s_JaloALUWrite, s_InstrAddr, s_MEMOUT : std_logic_vector(31 downto 0); 
 signal s_ALUOp : std_logic_vector(2 downto 0);
 signal s_LogicChoice : std_logic_vector(1 downto 0);
 begin
@@ -154,7 +154,7 @@ port map( i_CLK   => i_CLK,
 	i_RS	=> s_RS_A,	
 	o_WRITEDST => s_oWRITEDST,	
 	o_JaloDataWrite	=> s_JaloALUWrite,
-	o_Instr =>   s_Instruction);
+	o_InstrAddr =>   s_InstrAddr);
 
 CONTROL1: control port map(
 	iOP  => s_Instruction(31 downto 26),
