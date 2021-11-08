@@ -120,7 +120,7 @@ port( i_CLK                       : in std_logic;
 	i_RS			    : in std_logic_vector(31 downto 0);
 	o_WRITEDST		    : out std_logic_vector(4 downto 0);
 	o_JaloDataWrite		    : out std_logic_vector(31 downto 0);
-	o_Instr			    : out std_logic_vector(N-1 downto 0));
+	o_InstrAddr			: out std_logic_vector(N-1 downto 0));
 
 end component;
 
@@ -193,7 +193,7 @@ REGFI: RegFile port map(i_CLK => i_CLK,
        o_RPB  =>  s_RT_B);
 
 BITIMM: bitExtension
- port map(i_SignSel	=> '1',
+ port map(i_SignSel => '1',
 	i_bit16	=> s_Instruction(15 downto 0),
 	o_bit32	=> s_IMM);	
 
