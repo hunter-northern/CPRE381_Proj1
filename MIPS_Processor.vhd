@@ -138,15 +138,14 @@ end component;
 component mux2t1_5 is
   -- Generic of type integer for input/output data width. Default value is 32.
   port(i_S          : in std_logic;
-       i_D0         : in std_logic_vector(J-1 downto 0);
-       i_D1         : in std_logic_vector(J-1 downto 0);
-       o_O          : out std_logic_vector(J-1 downto 0));
+       i_D0         : in std_logic_vector(4 downto 0);
+       i_D1         : in std_logic_vector(4 downto 0);
+       o_O          : out std_logic_vector(4 downto 0));
 
 end component;
 
 component FetchLogic is
 port(  i_CLK                       : in std_logic;
-	i_IMWE			    : in std_logic;	
         i_RST                       : in std_logic;
 	i_Branch		    : in std_logic;
 	i_BNE			    : in std_logic;
@@ -219,16 +218,16 @@ port map( i_CLK   => iCLK,
 	i_Jr	=> s_Jr,	
 	i_J	=> s_J,
 	i_WRITEDST => s_RToRD,	
-	i_JumpAddr => s_Instruction(25 downto 0),
+	i_JumpAddr => s_Inst(25 downto 0),
 	i_BranchImmAddr	=> s_Imm,	
 	i_WriteData => s_ALUWriteData,	
 	i_RS	=> s_RS_A,	
 	o_WRITEDST => s_oWRITEDST,	
 	o_JaloDataWrite	=> s_JaloALUWrite,
-	o_InstrAddr =>   s_InstrAddr);
+	o_InstrAddr =>   s_DMemAddr);
 
 
-CONTROL1: control is
+CONTROL1: control
   port map(iOP      => s_Inst(31 downto 26),
        iFunc    => s_Inst(5 downto 0),
        oRegDst  => s_RegDst,
@@ -239,7 +238,7 @@ CONTROL1: control is
        oMemWrite=> s_DMemWr, 
        oALUSrc  => s_ALUSrc, --done
 	o_ADDSUB => s_ADDSUB, --done
-	o_SHFTDIR => s_SHIFTDIR, --done
+	o_SHFTDIR => s_SHFTDIR, --done
 	o_SHFTTYPE => s_SHFTTYPE, --done
 	o_LogicChoice => s_LogicChoice, --done
 	o_Unsigned => s_Unsigned,
@@ -252,56 +251,55 @@ MUXRD: mux2t1_5 port map(
 	i_S => s_RegDst,
 	i_D0 => s_Inst(20 downto 16),
 	i_D1 => s_Inst(15 downto 11),
-	o_O  => s_RToRD);
+	o_O  => s_RegWrAddr);
 
 REGFILE1: RegFile
-  port map(i_CLK  => iCLK
+  port map(i_CLK  => iCLK,
 	i_WE => s_RegWr,
-       i_WRN  =>  s_RToRD,
-	i_RST =>  i_RST,
-       i_WD   =>  s_JaloALUWrite,	
+       i_WRN  =>  s_RegWrAddr,
+	i_RST =>  iRST,
+       i_WD   =>  s_RegWrData,	
        i_RPA  =>  s_Inst(25 downto 21),
        i_RPB  =>  s_Inst(20 downto 16),
        o_RPA  =>  s_RS_A,
-       o_RPB  =>  s_RT_B);
+       o_RPB  =>  s_DMemData);
 
 MUXRTI: mux2t1_N port map(
 	i_S => s_ALUSrc,
-	i_D0 => s_RT_B,
+	i_D0 => s_DMemData,
 	i_D1 => s_IMM,
 	o_O  => S_RT_I);
 
-DATAMEM1: mem port map(
-	clk => i_CLK,
-	addr => s_ALURES,
-	data => s_RT_B,
-	we => s_oMemWriteE,
-	q => s_MEMOUT);
-
 ALU1 : ALU port map(i_PA => s_RS_A,
        i_PBoIMM	 => s_RT_I,
-	i_SHAMT	 => s_Instruction(10 downto 6),
+	i_SHAMT	 => s_Inst(10 downto 6),
 	i_ALUOP	 => s_ALUOp,
 	i_ShftDIR => s_SHFTDIR,
 	i_LogicCtrl => s_LogicChoice,
 	i_AddSub => s_ADDSUB,
 	i_ShftTYP => s_SHFTTYPE,
 	i_Unsign => s_Unsigned,
-        o_ALURES => s_ALURES,
-	o_OvrFlw => o_OverFlow,
+        o_ALURES => s_DMemAddr,
+	o_OvrFlw => s_Ovfl,
 	o_ZERO 	 => s_ZERO);
 
 MUXMEMOALU: mux2t1_N port map(
 	i_S => s_oMemtoReg,
-	i_D0 => s_ALURES,
-	i_D1 => s_MEMOUT,
-	o_O  => S_ALUWriteData);
-
+	i_D0 => s_DMemAddr,
+	i_D1 => s_DMemOut,
+	o_O  => s_RegWrData);
 
 BITIMM: bitExtension
  port map(i_SignSel => '1',
-	i_bit16	=> s_Instruction(15 downto 0),
+	i_bit16	=> s_Inst(15 downto 0),
 	o_bit32	=> s_IMM);	
+
+with s_inst(31 downto 26) select
+s_HALT <= '1' when "010100",
+          '0' when others;
+
+
+
 
 
 
