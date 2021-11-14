@@ -110,6 +110,7 @@ DUTADDR: AdderSub_N port map(
        o_C     => s_Carry,
        o_Over  => s_Overflow,
        o_B   => s_ADDERES);
+
 s_SLT <= ("0000000000000000000000000000000" & s_ADDERES(31));
 
 o_ZERO <= not(s_ADDERES(0) or s_ADDERES(1) or s_ADDERES(2) or

@@ -63,6 +63,7 @@ component control is
 	o_LogicChoice : out std_logic_vector(1 downto 0); --done
 	o_Unsigned : out std_logic;
 	o_Halt	   : out std_logic;
+	o_SignSelCtl : out std_logic;
        oJr	: out std_logic; --done
        oJal     : out std_logic; --done
        oBNE     : out std_logic; --done
@@ -145,9 +146,9 @@ end component;
 
 signal s_ALURES, S_RT_I : std_logic_vector(31 downto 0);
 signal s_RS_A, s_RT_B, s_IMM : std_logic_vector(31 downto 0);
-signal s_oC, s_Branch, s_BNE, s_J, s_Jal, s_ZERO, s_Jr, s_RegDst, s_oMemtoReg, s_oMemWriteE, s_ALUSrc : std_logic;
+signal s_oC, s_Branch, s_BNE, s_J, s_Jal, s_ALUZERO, s_ZERO, s_Jr, s_RegDst, s_oMemtoReg, s_oMemWriteE, s_ALUSrc : std_logic;
 signal s_ADDSUB, s_SHFTDIR, s_SHFTTYPE, s_Unsigned, s_RegWrEn : std_logic;
-
+signal s_SignSelCtl : std_logic := '1';
 signal s_iWRITEDST, s_oWRITEDST, s_RToRD : std_logic_vector(4 downto 0);
 signal s_iJumpAddr : std_logic_vector(25 downto 0);
 signal s_ALUWriteData, s_JaloALUWrite, s_InstrAddr, s_MEMOUT : std_logic_vector(31 downto 0); 
@@ -222,7 +223,7 @@ port map( i_CLK   => iCLK,
 	i_J	=> s_J,
 	i_WRITEDST => s_RToRD,	
 	i_JumpAddr => s_Inst(25 downto 0),
-	i_BranchImmAddr	=> s_Imm,	
+	i_BranchImmAddr	=> s_IMM,	
 	i_WriteData => s_ALUWriteData,	
 	i_RS	=> s_RS_A,	
 	o_WRITEDST => s_RegWrAddr,	
@@ -246,6 +247,7 @@ CONTROL1: control
 	o_LogicChoice => s_LogicChoice, --done
 	o_Unsigned => s_Unsigned,
 	o_Halt	  =>  s_Halt,
+	o_SignSelCtl => s_SignSelCtl,
        oJr	=> s_Jr, --done
        oJal     => s_Jal, --done
        oBNE     => s_BNE, --done
@@ -268,7 +270,7 @@ REGFILE1: RegFile
        o_RPA  =>  s_RS_A,
        o_RPB  =>  s_RT_B);
 
-s_RT_B <= s_DMemData;
+s_DMemData <= s_RT_B;
 
 MUXRTI: mux2t1_N port map(
 	i_S => s_ALUSrc,
@@ -287,8 +289,9 @@ ALU1 : ALU port map(i_PA => s_RS_A,
 	i_Unsign => s_Unsigned,
         o_ALURES => s_ALURES,
 	o_OvrFlw => s_Ovfl,
-	o_ZERO 	 => s_ZERO);
+	o_ZERO 	 => s_ALUZERO);
 
+s_ZERO <= s_ALUZERO;
 s_DMemAddr <= s_ALURES;
 oALUOut <= s_ALURES;
 
@@ -300,7 +303,7 @@ MUXMEMOALU: mux2t1_N port map(
 
 
 BITIMM: bitExtension
- port map(i_SignSel => '1',
+ port map(i_SignSel => s_SignSelCtl,
 	i_bit16	=> s_Inst(15 downto 0),
 	o_bit32	=> s_IMM);	
 

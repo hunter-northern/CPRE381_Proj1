@@ -36,6 +36,7 @@ entity control is
 	o_LogicChoice : out std_logic_vector(1 downto 0); --done
 	o_Unsigned : out std_logic;
 	o_Halt	   : out std_logic;
+	o_SignSelCtl : out std_logic;
        oJr	: out std_logic; --done
        oJal     : out std_logic; --done
        oBNE     : out std_logic; --done
@@ -69,7 +70,7 @@ signal s2Halt	  : std_logic;
 signal s2LogicChoice : std_logic_vector(1 downto 0);
 signal s2RegWrite: std_logic;
 signal s2Unsigned : std_logic;
-signal sJr, sJ       : std_logic;
+signal sJr, sJ , s_SignSelCtl     : std_logic;
 
 begin
 
@@ -256,7 +257,7 @@ with iOP select
                 '0' when "001010", --slti
                 '0' when "101011", --sw
                 '1' when "000100", --beq
-                '1' when "000101", --bne
+                '0' when "000101", --bne
                 '0' when "000010", --j
                 '0' when "000011", --jal
                 '0' when "011111", --repl.qb
@@ -287,7 +288,7 @@ with iOP select
                 "010" when "100011", --lw
                 "011" when "001110", --xori
                 "011" when "001101", --ori
-                "000" when "001010", --slti
+                "001" when "001010", --slti
                 "010" when "101011", --sw
                 "010" when "000100", --beq
                 "010" when "000101", --bne
@@ -375,7 +376,7 @@ with iOP select
                 '0' when "000100", --beq
                 '0' when "000101", --bne
                 '0' when "000010", --j
-                '0' when "000011", --jal
+                '1' when "000011", --jal
                 '1' when "011111", --repl.qb
                 '0' when others;
 
@@ -395,6 +396,11 @@ with iOP select
 with iOP select
       oBNE <= '1' when "000101",
               '0' when others;
+
+with iOP select 
+	s_SignSelCtl <= '0' when "001101", --ori
+			'0' when "001100", --andi
+			'1' when others;
      
 
 Process (iOP, s1RegDst, s1Branch, 
@@ -402,7 +408,7 @@ Process (iOP, s1RegDst, s1Branch,
 	s1ALUSrc, s1AddSub, s1SHFTTYPE, s1SHFTDIR, 
 	s1LogicChoice, s1Unsigned, s1RegWrite, s2RegDst, s2Branch, 
 	s2MemtoReg, s2ALUOp, s2MemWrite, s2ALUSrc,
-	s2AddSub, s2LogicChoice, s2Unsigned, s2RegWrite)
+	s2AddSub, s2LogicChoice, s2Unsigned, s2RegWrite, s_SignSelCtl)
 begin
 if iOP = "000000" then
        oRegDst <= s1RegDst; 
@@ -417,6 +423,7 @@ if iOP = "000000" then
 	o_LogicChoice <= s1LogicChoice;
 	o_Unsigned  <= s1Unsigned;
 	o_Halt  <= '0';
+	o_SignSelCtl <= '1';
        oRegWrite <= s1RegWrite;
        oJr <= sJr;
 else
@@ -432,6 +439,7 @@ else
 	o_LogicChoice <= s2LogicChoice;
 	o_Unsigned  <= s2Unsigned;
 	o_Halt	 <= s2Halt;
+	o_SignSelCtl <= s_SignSelCtl;
        oRegWrite <= s2RegWrite;
        oJr <= '0';
 end if;
