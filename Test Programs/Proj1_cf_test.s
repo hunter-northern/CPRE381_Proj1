@@ -13,9 +13,9 @@ recursive:
 	addi $sp, $sp, -8	# space for two words
 	sw $ra, 4($sp)		# save return address
 	sw $a0, 0($sp)		# temporary variable to hold n
-	addi $v0, $0, 1
+	li $v0, 1
 	slti $t0, $a0, 1
-	beq $t0, $0, recexit
+	bne $t0, $0, recexit
 	addi $a0, $a0, -1
 	jal recursive
 	lw $a0, 0($sp)		# retrieve original n
