@@ -1,0 +1,61 @@
+
+Exception caught at 2021-11-10 13:00:48.790491:
+Traceback (most recent call last):
+  File "internal/testpy/test_framework.py", line 238, in <module>
+    main()
+  File "internal/testpy/test_framework.py", line 46, in main
+    input("Press Enter to Exit...")
+EOFError
+
+Exception caught at 2021-11-10 13:50:17.220019:
+Traceback (most recent call last):
+  File "internal/testpy/test_framework.py", line 238, in <module>
+    main()
+  File "internal/testpy/test_framework.py", line 57, in main
+    input("Press Enter To Exit...")
+EOFError
+
+Exception caught at 2021-11-10 13:50:21.514019:
+Traceback (most recent call last):
+  File "internal/testpy/test_framework.py", line 238, in <module>
+    main()
+  File "internal/testpy/test_framework.py", line 57, in main
+    input("Press Enter To Exit...")
+EOFError: EOF when reading a line
+
+Exception caught at 2021-11-13 22:38:57.074663:
+Traceback (most recent call last):
+  File "/usr/local/mentor/calibre/pkgs/icv_python/asp/lib/python3.6/tkinter/__init__.py", line 1702, in __call__
+    return self.func(*args)
+  File "/home/northern/cpre381/cpre-381-toolflow-fall-2021/internal/testpy/run_gui.py", line 197, in chooseSelectedFiles
+    test_framework.queueSimulation(asm_files_to_run, options)
+  File "/home/northern/cpre381/cpre-381-toolflow-fall-2021/internal/testpy/test_framework.py", line 61, in queueSimulation
+    print("Adding Asm Files to Queue\n")
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "internal/testpy/test_framework.py", line 238, in <module>
+    main()
+  File "internal/testpy/test_framework.py", line 55, in main
+    run_gui.guiMain()
+  File "/home/northern/cpre381/cpre-381-toolflow-fall-2021/internal/testpy/run_gui.py", line 156, in guiMain
+    window.mainloop()
+  File "/usr/local/mentor/calibre/pkgs/icv_python/asp/lib/python3.6/tkinter/__init__.py", line 1280, in mainloop
+    self.tk.mainloop(n)
+  File "/usr/local/mentor/calibre/pkgs/icv_python/asp/lib/python3.6/tkinter/__init__.py", line 1706, in __call__
+    self.widget._report_exception()
+  File "/usr/local/mentor/calibre/pkgs/icv_python/asp/lib/python3.6/tkinter/__init__.py", line 1449, in _report_exception
+    root.report_callback_exception(exc, val, tb)
+  File "/usr/local/mentor/calibre/pkgs/icv_python/asp/lib/python3.6/tkinter/__init__.py", line 2091, in report_callback_exception
+    print("Exception in Tkinter callback", file=sys.stderr)
+OSError: [Errno 5] Input/output error
+
+Exception caught at 2021-11-14 00:56:29.145138:
+Traceback (most recent call last):
+  File "internal/testpy/test_framework.py", line 238, in <module>
+    main()
+  File "internal/testpy/test_framework.py", line 57, in main
+    input("Press Enter To Exit...")
+EOFError: EOF when reading a line
