@@ -54,6 +54,8 @@ slt $t7, $t5, $t2       # set $t7 to 0 since 0x04040404 > 19
 slti $t8, $t6, 1        # set $t8 to 0 since 1 = 1
 slti $t9, $t8, 1        # set $t9 to 1 since 0 < 1
 
+li $v0, 10
+syscall
 
 
 
